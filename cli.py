@@ -1,7 +1,9 @@
 import click
 from flask import Flask
+import os
+from pathlib import Path
 
-app=Flask(__name__)
-@app.cli.command()
-def sayhi():
-    click.echo("hello")
+images=os.scandir()
+for i in images:
+	print(Path(images))
+
